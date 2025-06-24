@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Autentikasi</title>
+    <script src="https://js.stytch.com/v1/stytch.js"></script>
+  </head>
+  <body>
+    <h2>Memproses login…</h2>
+    <script>
+      const client = new stytch.Client({ public_token: "PUBLIC_TOKEN_STYTCH" });
+      const token = new URLSearchParams(window.location.search).get("token");
+      client.emailMagicLinks
+        .authenticate({ token })
+        .then((res) => {
+          localStorage.setItem("auth_jwt", res.session_jwt);
+          localStorage.setItem("user_id", res.user_id);
+          window.location.href = "/index.html";
+        })
+        .catch(() => (document.body.innerHTML = "Autentikasi gagal."));
+    </script>
+  </body>
+</html>
