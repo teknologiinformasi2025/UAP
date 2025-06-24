@@ -10,7 +10,9 @@
     <input type="email" id="email" placeholder="Email" />
     <button onclick="loginWithEmail()">Kirim Link Login</button>
     <script>
-      const client = new stytch.Client({ public_token: "PUBLIC_TOKEN_STYTCH" });
+      const client = new stytch.Client({
+        public_token: "public-token-live-3f3d7101-7b3e-47e3-ab1b-92ddb6b31235",
+      });
       function loginWithEmail() {
         const email = document.getElementById("email").value;
         client.emailMagicLinks
