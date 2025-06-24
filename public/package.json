@@ -1,0 +1,22 @@
+{
+  "name": "kuis-project",
+  "version": "1.0.0",
+  "description": "Kuis online dengan autentikasi Stytch dan penyimpanan skor ke Neon via Netlify Function",
+  "main": "index.js",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "keywords": [
+    "kuis",
+    "stytch",
+    "netlify",
+    "neon",
+    "postgresql"
+  ],
+  "author": "satrio",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.11.0",
+    "node-fetch": "^2.6.7"
+  }
+}
